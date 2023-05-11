@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,5 +25,17 @@ namespace Juego_del_gato
         {
             InitializeComponent();
         }
+
+        private void RevisarInput(TextBox textBox)
+        {
+            if (Regex.IsMatch(textBox.Text, "x", RegexOptions.IgnoreCase) || Regex.IsMatch(textBox.Text, "o", RegexOptions.IgnoreCase))
+            {
+
+                textBox.Text = "";
+
+            }
+        }
+
+
     }
 }

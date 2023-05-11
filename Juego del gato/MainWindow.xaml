@@ -7,6 +7,138 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="0.6*"/>
+            <ColumnDefinition
+                Width="0.3*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Grid
+                Width="300"
+                Height="300">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!-- Forma de gato -->
+                <Rectangle
+                    Grid.Column="1"
+                    Grid.RowSpan="5"
+                    Fill="Black"
+                    Width="10"
+                    Height="240"/>
+                <Rectangle
+                    Grid.Column="3"
+                    Grid.RowSpan="5"
+                    Fill="Black"
+                    Width="10"/>
 
+                <Rectangle
+                    Grid.Row="1"
+                    Grid.ColumnSpan="5"
+                    Fill="Black"
+                    Height="10"/>
+                <Rectangle
+                    Grid.Row="3"
+                    Grid.ColumnSpan="5"
+                    Fill="Black"
+                    Height="10"/>
+
+                <!-- Fila 1 -->
+                <Button
+                    x:Name="tb00"
+                    Height="70"
+                    Width="70"
+                    Background="Gray"
+                    BorderBrush="Black"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"/>
+                <Button
+                    x:Name="tb10"
+                    Height="70"
+                    Width="70"
+                    Background="Gray"
+                    BorderBrush="Black"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    />
+                <Button
+                    x:Name="tb20"
+                    Height="70"
+                    Width="70"
+                    Background="Gray"
+                    BorderBrush="Black" 
+                    Grid.Column="4"
+                    Grid.Row="0"
+                    />
+                <!-- Fila 2 -->
+                <Button
+                    x:Name="tb01"
+                    Height="70"
+                    Width="70"
+                    Background="Gray"
+                    BorderBrush="Black" 
+                    Grid.Column="0"
+                    Grid.Row="2"/>
+
+                <TextBox
+                    x:Name="tb11"
+                    Height="70"
+                    Width="70"
+                    Background="Gray"
+                    BorderBrush="Black" 
+                    Grid.Column="2"
+                    Grid.Row="2"/>
+
+                <TextBox
+                    x:Name="tb21"
+                    Height="70"
+                    Width="70"
+                    Background="Gray"
+                    BorderBrush="Black" 
+                    Grid.Column="4"
+                    Grid.Row="2"/>
+                <!-- Fila 3 -->
+                <TextBox
+                    x:Name="tb02"
+                    Height="70"
+                    Width="70"
+                    Background="Gray"
+                    BorderBrush="Black" 
+                    Grid.Column="0"
+                    Grid.Row="4"/>
+                <TextBox
+                    x:Name="tb12"
+                    Height="70"
+                    Width="70"
+                    Background="Gray"
+                    BorderBrush="Black" 
+                    Grid.Column="2"
+                    Grid.Row="4"/>
+                <TextBox
+                    x:Name="tb22"
+                    Height="70"
+                    Width="70"
+                    Background="Gray"
+                    BorderBrush="Black" 
+                    Grid.Column="4"
+                    Grid.Row="4"/>
+
+            </Grid>
+        </StackPanel>
+        
     </Grid>
 </Window>
