@@ -13,23 +13,35 @@
             <ColumnDefinition
                 Width="0.3*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel>
+        <!-- Parte de la izquierda -->
+        <StackPanel
+            VerticalAlignment="Center">
             <Grid
-                Width="300"
-                Height="300">
+                Width="230"
+                Height="230">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition
+                        Width="70"/>
+                    <ColumnDefinition
+                        Width="10"/>
+                    <ColumnDefinition
+                        Width="70"/>
+                    <ColumnDefinition
+                        Width="10"/>
+                    <ColumnDefinition
+                        Width="70"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition
+                        Height="70"/>
+                    <RowDefinition
+                        Height="10"/>
+                    <RowDefinition
+                        Height="70"/>
+                    <RowDefinition
+                        Height="10"/>
+                    <RowDefinition
+                        Height="70"/>
                 </Grid.RowDefinitions>
                 <!-- Forma de gato -->
                 <Rectangle
@@ -57,7 +69,7 @@
 
                 <!-- Fila 1 -->
                 <Button
-                    x:Name="tb00"
+                    x:Name="btn00"
                     Height="70"
                     Width="70"
                     Background="Gray"
@@ -65,80 +77,171 @@
                     Grid.Column="0"
                     Grid.Row="0"
                     VerticalAlignment="Bottom"
-                    HorizontalAlignment="Right"/>
+                    HorizontalAlignment="Right" 
+                    Click="Click"
+                    />
                 <Button
-                    x:Name="tb10"
+                    x:Name="btn10"
                     Height="70"
                     Width="70"
                     Background="Gray"
                     BorderBrush="Black"
                     Grid.Column="2"
                     Grid.Row="0"
+                    Click="Click"
                     />
                 <Button
-                    x:Name="tb20"
+                    x:Name="btn20"
                     Height="70"
                     Width="70"
                     Background="Gray"
                     BorderBrush="Black" 
                     Grid.Column="4"
                     Grid.Row="0"
+                    Click="Click"
                     />
                 <!-- Fila 2 -->
                 <Button
-                    x:Name="tb01"
+                    x:Name="btn01"
                     Height="70"
                     Width="70"
                     Background="Gray"
                     BorderBrush="Black" 
                     Grid.Column="0"
-                    Grid.Row="2"/>
+                    Grid.Row="2"
+                    Click="Click"/>
 
-                <TextBox
-                    x:Name="tb11"
+                <Button
+                    x:Name="btn11"
                     Height="70"
                     Width="70"
                     Background="Gray"
                     BorderBrush="Black" 
                     Grid.Column="2"
-                    Grid.Row="2"/>
+                    Grid.Row="2"
+                    Click="Click"/>
 
-                <TextBox
-                    x:Name="tb21"
+                <Button
+                    x:Name="btn21"
                     Height="70"
                     Width="70"
                     Background="Gray"
                     BorderBrush="Black" 
                     Grid.Column="4"
-                    Grid.Row="2"/>
+                    Grid.Row="2"
+                    Click="Click"/>
                 <!-- Fila 3 -->
-                <TextBox
-                    x:Name="tb02"
+                <Button
+                    x:Name="btn02"
                     Height="70"
                     Width="70"
                     Background="Gray"
                     BorderBrush="Black" 
                     Grid.Column="0"
-                    Grid.Row="4"/>
-                <TextBox
-                    x:Name="tb12"
+                    Grid.Row="4"
+                    Click="Click"/>
+                <Button
+                    x:Name="btn12"
                     Height="70"
                     Width="70"
                     Background="Gray"
                     BorderBrush="Black" 
                     Grid.Column="2"
-                    Grid.Row="4"/>
-                <TextBox
-                    x:Name="tb22"
+                    Grid.Row="4"
+                    Click="Click"/>
+                <Button
+                    x:Name="btn22"
                     Height="70"
                     Width="70"
                     Background="Gray"
                     BorderBrush="Black" 
                     Grid.Column="4"
-                    Grid.Row="4"/>
+                    Grid.Row="4"
+                    Click="Click"/>
 
             </Grid>
+            <TextBlock
+                Text="Score"
+                HorizontalAlignment="Center"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <!-- Titulos -->
+                <TextBlock
+                    x:Name="txtNombreJ1"
+                    Text="P1"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"/>
+                <TextBlock
+                    x:Name="txtEmpates"
+                    Text="Empates"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"/>
+                <TextBlock
+                    x:Name="txtNombreJ2"
+                    Text="P2"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"/>
+                
+                <!-- Fila 2 -->
+                <TextBlock
+                    x:Name="txtCantidadGanadosJ1"
+                   Text="0"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"/>
+                <TextBlock
+                    x:Name="txtCantidadEmpatados"
+                    Text="0"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"/>
+                <TextBlock
+                    x:Name="txtCantidadGanadosJ2"
+                    Text="0"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"/>
+            </Grid>
         </StackPanel>
-        
+        <!-- Parte de la derecha  -->
+        <StackPanel
+            Grid.Column="1"
+            VerticalAlignment="Center">
+
+            <TextBlock
+                HorizontalAlignment="Center">
+                Nombre J1
+            </TextBlock>
+            <TextBox
+                x:Name="txbNombreJ1" 
+                TextChanged="txtTextChanged"/>
+            <TextBlock
+                HorizontalAlignment="Center">
+                Nombre J2
+            </TextBlock>
+            <TextBox
+                x:Name="txbNombreJ2"
+                TextChanged="txtTextChanged"/>
+
+            <Button
+                x:Name="btnRestart"
+                Height="30"
+                Width="200"
+                Content="Restart" Click="btnRestart_Click"
+                />
+
+        </StackPanel>
     </Grid>
 </Window>
